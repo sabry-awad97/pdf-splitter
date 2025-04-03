@@ -1,11 +1,9 @@
 """Core PDF processing functionality for the PDF Splitter utility."""
 
-import os
 from pathlib import Path
-from typing import List, Tuple, Union, Optional
+from typing import List, Tuple
 
 from PyPDF2 import PdfReader, PdfWriter
-from rich.progress import Progress
 
 
 class PDFProcessor:

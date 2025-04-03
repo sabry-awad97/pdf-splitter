@@ -1,6 +1,5 @@
 """Command-line interface for the PDF Splitter utility."""
 
-import os
 import sys
 from pathlib import Path
 from typing import Optional
@@ -233,7 +232,7 @@ def info(input_file: Path):
             f"Pages: [bold]{pdf_info['pages']}[/bold]\n"
             f"Encrypted: [{'red' if pdf_info['is_encrypted'] else 'green'}]"
             f"{pdf_info['is_encrypted']}[/{'red' if pdf_info['is_encrypted'] else 'green'}]"
-            + (f" (can be decrypted)" if pdf_info['is_encrypted'] and pdf_info['can_be_decrypted'] else ""),
+            + (" (can be decrypted)" if pdf_info['is_encrypted'] and pdf_info['can_be_decrypted'] else ""),
             title="PDF Information",
             border_style="blue",
         ))
